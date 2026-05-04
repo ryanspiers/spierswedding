@@ -1,26 +1,160 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* PP Pangaia — headings */
+@font-face {
+  font-family: "PP Pangaia";
+  src: url("/PPPangaia-Ultralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Pangaia";
+  src: url("/PPPangaia-UltralightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Pangaia";
+  src: url("/PPPangaia-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Pangaia";
+  src: url("/PPPangaia-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Pangaia";
+  src: url("/PPPangaia-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Pangaia";
+  src: url("/PPPangaia-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* PP Mori — body */
+@font-face {
+  font-family: "PP Mori";
+  src: url("/PPMori-ExtraLight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Mori";
+  src: url("/PPMori-ExtraLightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Mori";
+  src: url("/PPMori-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Mori";
+  src: url("/PPMori-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Mori";
+  src: url("/PPMori-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Mori";
+  src: url("/PPMori-SemiBoldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-cream: #FDF8F0;
+  --color-cream-dark: #F5EDE0;
+  --color-gold-light: #D4AF37;
+  --color-gold: #B8962E;
+  --color-gold-dark: #8C7023;
+  --color-sage-light: #D4DFC7;
+  --color-sage: #9CAF88;
+  --color-sage-dark: #6B7F5E;
+  --color-stone-800: #292524;
+  --color-stone-500: #78716C;
+  --color-stone-300: #D6D3D1;
+  --color-red-600: #DC2626;
+  --color-red-50: #FEF2F2;
+  --color-peach: #FDEFE6;
+  --color-orange: #EC6408;
+  --color-navy: #293E61;
+  --color-navy-muted: #445675;
+  --font-serif: "PP Pangaia", Georgia, serif;
+  --font-body: "PP Mori", system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: var(--color-stone-800);
+  font-family: var(--font-body);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+@keyframes hero-parallax {
+  to {
+    transform: translateY(30vh);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-parallax {
+    animation: hero-parallax linear forwards;
+    animation-timeline: scroll(root);
+    animation-range: 0 100vh;
+  }
+}
+
+/* Offset scroll targets for fixed nav */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Hide details marker */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  list-style: none;
 }
