@@ -15,7 +15,7 @@ export function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fffbf5]">
       <div className="px-6 flex items-center justify-between h-[72px]">
         {/* Logo — replace src with your SVG when ready */}
         <Link href="/" className="relative w-8 h-8">

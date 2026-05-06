@@ -168,9 +168,26 @@ body {
   }
 }
 
+.polaroid {
+  transform: rotate(var(--polaroid-rotate, 0deg));
+}
+
+@keyframes polaroid-parallax {
+  to {
+    transform: rotate(var(--polaroid-rotate, 0deg))
+      translateY(var(--polaroid-translate, 0));
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .hero-parallax {
     animation: hero-parallax linear forwards;
+    animation-timeline: scroll(root);
+    animation-range: 0 100vh;
+  }
+
+  .polaroid {
+    animation: polaroid-parallax linear forwards;
     animation-timeline: scroll(root);
     animation-range: 0 100vh;
   }
