@@ -1,16 +1,40 @@
 import Image from "next/image";
 
+function AnimatedLetters({
+  text,
+  className,
+  startIndex = 0,
+}: {
+  text: string;
+  className?: string;
+  startIndex?: number;
+}) {
+  return (
+    <>
+      {text.split("").map((char, i) => (
+        <span
+          key={i}
+          className={`hero-letter ${className ?? ""}`}
+          style={{ animationDelay: `${(startIndex + i) * 80}ms` }}
+        >
+          {char === " " ? " " : char}
+        </span>
+      ))}
+    </>
+  );
+}
+
 export function Hero() {
   return (
     <section className="flex flex-col pt-[160px] relative z-0 hero-parallax">
       {/* Headings */}
-      <div className="px-6 pt-10 sm:pt-14 animate-fade-in">
+      <div className="px-6 pt-10 sm:pt-14">
         <h1 className="font-serif font-[200] text-5xl sm:text-7xl md:text-8xl leading-[0.94] tracking-tight">
-          <span className="text-orange">Leigh </span>
-          <span className="text-navy italic">&amp;</span>
-          <span className="text-orange"> Ryan</span>
+          <AnimatedLetters text="Leigh " className="text-orange" startIndex={0} />
+          <AnimatedLetters text="&" className="text-navy italic" startIndex={6} />
+          <AnimatedLetters text=" Ryan" className="text-orange" startIndex={7} />
         </h1>
-        <p className="mt-5 font-body font-[200] text-base text-navy">
+        <p className="hero-date mt-5 font-body font-[200] text-base text-navy">
           24 September 2026
         </p>
       </div>
