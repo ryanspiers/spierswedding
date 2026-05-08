@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Hero } from "@/components/hero";
+import { RsvpDrawer } from "@/components/rsvp-drawer";
 
 export default function Home() {
   return (
@@ -8,15 +10,15 @@ export default function Home() {
 
       <div className="relative z-10 bg-white">
       {/* Our Story / Intro */}
-      <section className="px-6 py-20 sm:py-28">
+      <section className="px-6 py-[60px]">
         <div className="max-w-2xl mx-auto">
-          <p className="text-sm font-body capitalize text-navy-muted mb-2">
+          <p className="text-sm font-body font-semibold capitalize text-navy mb-2">
             Our Story
           </p>
-          <h2 className="font-serif font-medium text-[30px] sm:text-4xl text-stone-800 leading-[1.25]">
+          <h2 className="font-serif font-[200] text-[30px] sm:text-4xl text-orange leading-[1.25]">
             Two hearts, one beautiful journey
           </h2>
-          <p className="mt-5 text-base text-stone-500 leading-[1.625]">
+          <p className="mt-5 text-base text-navy-soft leading-[1.625]">
             After years of love, laughter, and countless memories together, we
             are thrilled to be taking the next step. We would be honoured to
             have you join us as we say &ldquo;I do.&rdquo;
@@ -25,18 +27,18 @@ export default function Home() {
       </section>
 
       {/* Schedule */}
-      <section id="schedule" className="px-6 py-20 sm:py-28 bg-white/50">
+      <section id="schedule" className="px-6 py-[60px]">
         <div className="max-w-2xl mx-auto">
-          <div className="mb-14">
-            <p className="text-sm font-body capitalize text-navy-muted mb-2">
+          <div className="mb-6">
+            <p className="text-sm font-body font-semibold capitalize text-navy mb-2">
               The Day
             </p>
-            <h2 className="font-serif font-medium text-[30px] sm:text-4xl text-stone-800 leading-[1.25]">
+            <h2 className="font-serif font-[200] text-[30px] sm:text-4xl text-orange leading-[1.25]">
               Order of the Day
             </h2>
           </div>
 
-          <div className="space-y-0">
+          <div className="flex flex-col">
             {[
               {
                 time: "14:00",
@@ -75,24 +77,22 @@ export default function Home() {
                   "The final send-off. Thank you for sharing our special day with us.",
               },
             ].map((item, index) => (
-              <div key={index} className="flex gap-6 sm:gap-10">
-                {/* Timeline line */}
-                <div className="flex flex-col items-center">
-                  <div className="w-3 h-3 rounded-full border-2 border-gold bg-cream shrink-0 mt-1" />
-                  {index < 5 && (
-                    <div className="w-px flex-1 bg-gold-light/40" />
-                  )}
+              <div key={index} className="flex gap-6">
+                {/* Timeline marker */}
+                <div className="flex flex-col items-center pt-1 w-3 self-stretch shrink-0">
+                  <div className="w-3 h-3 rounded-full border-2 border-orange bg-orange/10 shrink-0" />
+                  <div className="w-px flex-1 bg-orange" />
                 </div>
 
                 {/* Content */}
-                <div className="pb-10">
-                  <span className="text-sm text-gold font-medium">
+                <div className="flex-1 pb-8 flex flex-col gap-2">
+                  <p className="font-body text-sm text-orange leading-5">
                     {item.time}
-                  </span>
-                  <h3 className="font-serif text-xl text-stone-800 mt-1">
+                  </p>
+                  <h3 className="font-serif font-medium text-xl text-navy leading-7">
                     {item.title}
                   </h3>
-                  <p className="text-stone-500 text-sm mt-2 leading-relaxed max-w-md">
+                  <p className="font-body text-sm text-[#303e56] leading-[1.625] max-w-[284px]">
                     {item.description}
                   </p>
                 </div>
@@ -103,44 +103,49 @@ export default function Home() {
       </section>
 
       {/* Venue */}
-      <section id="venue" className="px-6 py-20 sm:py-28">
+      <section id="venue" className="px-6 py-[60px]">
         <div className="max-w-2xl mx-auto">
-          <div className="mb-14">
-            <p className="text-sm font-body capitalize text-navy-muted mb-2">
+          <div className="flex flex-col gap-2 mb-6">
+            <p className="text-sm font-body font-semibold capitalize text-navy">
               The Venue
             </p>
-            <h2 className="font-serif font-medium text-[30px] sm:text-4xl text-stone-800 leading-[1.25]">
-              Where to Find Us
+            <h2 className="font-serif font-[200] text-[30px] sm:text-4xl text-orange leading-[1.25]">
+              Where it's all happening
             </h2>
+            <p className="text-base text-navy-soft leading-[1.625]">
+              Set amongst the rolling hills of Renfrewshire, Bowfield Hotel
+              &amp; Spa is the perfect setting for our day. We can&apos;t wait
+              to celebrate with you in this beautiful venue.
+            </p>
           </div>
 
-          <div className="bg-white/60 rounded-xl border border-stone-300/30 overflow-hidden">
-            {/* Placeholder for venue image */}
-            <div className="aspect-[16/9] bg-sage-light/20 flex items-center justify-center">
-              <p className="text-stone-400 text-sm">Venue photo</p>
+          <div className="bg-white/60 border border-navy-20 rounded-[12px] overflow-hidden">
+            <div className="relative h-48 bg-sage-light/20 overflow-hidden">
+              <Image
+                src="/venue.png"
+                alt="Bowfield Hotel & Spa"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 672px"
+              />
             </div>
-            <div className="p-6 sm:p-8 text-center">
-              <h3 className="font-serif text-2xl text-stone-800 mb-2">
-                Venue Name
-              </h3>
-              <p className="text-stone-500 text-sm leading-relaxed mb-4">
-                123 Venue Address, City, Postcode
-              </p>
+            <div className="flex flex-col items-center gap-4 p-6">
+              <div className="flex flex-col items-center gap-[7px]">
+                <h3 className="font-serif font-medium text-2xl text-navy leading-8 text-center">
+                  Bowfield Hotel &amp; Spa
+                </h3>
+                <p className="font-body text-sm text-navy-soft text-center leading-[22.75px]">
+                  Bowfield Road, Howwood,
+                  <br />
+                  Johnstone, PA9 1DZ
+                </p>
+              </div>
               <a
-                href="#"
-                className="inline-flex items-center gap-2 text-sm text-sage-dark hover:text-sage transition-colors"
+                href="https://www.google.com/maps/search/?api=1&query=Bowfield+Hotel+Spa+PA9+1DZ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full h-12 border border-navy rounded-md text-base text-navy tracking-[0.4px] hover:bg-navy/5 transition-colors"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                  <circle cx="12" cy="9" r="2.5" />
-                </svg>
                 View on Google Maps
               </a>
             </div>
@@ -149,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* Details: Dress Code & Accommodations */}
-      <section id="details" className="px-6 py-20 sm:py-28 bg-white/50">
+      <section id="details" className="px-6 py-[60px]">
         <div className="max-w-2xl mx-auto">
           <div className="mb-14">
             <p className="text-sm font-body capitalize text-navy-muted mb-2">
@@ -263,7 +268,7 @@ export default function Home() {
       </section>
 
       {/* FAQs */}
-      <section id="faqs" className="px-6 py-20 sm:py-28">
+      <section id="faqs" className="px-6 py-[60px]">
         <div className="max-w-2xl mx-auto">
           <div className="mb-14">
             <p className="text-sm font-body capitalize text-navy-muted mb-2">
@@ -333,7 +338,7 @@ export default function Home() {
       </section>
 
       {/* RSVP CTA */}
-      <section className="px-6 py-20 sm:py-28 bg-white/50">
+      <section className="px-6 py-[60px]">
         <div className="max-w-2xl mx-auto">
           <p className="text-sm font-body capitalize text-navy-muted mb-2">
             We hope to see you there
@@ -362,6 +367,7 @@ export default function Home() {
         </p>
       </footer>
       </div>
+      <RsvpDrawer />
     </>
   );
 }
