@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap");
 @import "tailwindcss";
 
 /* PP Pangaia — headings */
@@ -110,6 +111,7 @@
   --color-navy-20: #D4D8DF;
   --font-serif: "PP Pangaia", Georgia, serif;
   --font-body: "PP Mori", system-ui, sans-serif;
+  --font-hand: "Caveat", cursive;
 }
 
 body {
@@ -197,6 +199,7 @@ body {
 
 .polaroid {
   transform: rotate(var(--polaroid-rotate, 0deg));
+  box-shadow: 4px 4px 20px rgba(41, 62, 97, 0.08);
 }
 
 @keyframes polaroid-parallax {

@@ -31,6 +31,8 @@ function Polaroid({
   className,
   src,
   alt,
+  caption,
+  captionRotate = 0,
 }: {
   rotate: number;
   parallax?: string;
@@ -38,6 +40,8 @@ function Polaroid({
   className?: string;
   src?: string;
   alt?: string;
+  caption?: string;
+  captionRotate?: number;
 }) {
   return (
     <div
@@ -64,6 +68,14 @@ function Polaroid({
             />
           )}
         </div>
+        {caption && (
+          <p
+            className="absolute inset-x-0 bottom-[14px] text-center font-hand text-2xl leading-none text-navy-soft"
+            style={{ transform: `rotate(${captionRotate}deg)` }}
+          >
+            {caption}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -80,15 +92,15 @@ export function Hero() {
           <AnimatedLetters text=" Ryan" className="text-orange" startIndex={7} />
         </h1>
         <p className="hero-date mt-5 font-body font-[200] text-base text-navy">
-          24 September 2026
+          24 September 2026 • Bowfield Hotel & Spa
         </p>
       </div>
 
       {/* Polaroid arrangement — scrolls at normal speed, drifts up over the text */}
       <div className="relative z-10 mt-8 sm:mt-12 w-full aspect-[400/520]">
-        <Polaroid rotate={-6.53} parallax="15vh" delay="1400ms" src="/polaroid1.jpg" alt="Leigh and Ryan" className="w-[51%] left-[-9%] top-0" />
-        <Polaroid rotate={4.97} parallax="0" delay="1600ms" src="/polaroid2.jpg" alt="Leigh and Ryan" className="w-[42%] left-[55%] top-[17%]" />
-        <Polaroid rotate={-1.72} parallax="-9vh" delay="1800ms" src="/polaroid3.jpg" alt="Leigh and Ryan" className="w-[42%] left-[12%] top-[59%]" />
+        <Polaroid rotate={-6.53} parallax="15vh" delay="1400ms" src="/polaroid1.jpg" alt="Leigh and Ryan" className="w-[51%] left-[-9%] top-0" caption="Engagement" captionRotate={-4.91} />
+        <Polaroid rotate={4.97} parallax="0" delay="1600ms" src="/polaroid2.jpg" alt="Leigh and Ryan" className="w-[42%] left-[55%] top-[17%]" caption="with Pablo" captionRotate={-3.85} />
+        <Polaroid rotate={-1.72} parallax="-9vh" delay="1800ms" src="/polaroid3.jpg" alt="Leigh and Ryan" className="w-[42%] left-[12%] top-[59%]" caption="2022" captionRotate={-5.04} />
       </div>
     </section>
   );

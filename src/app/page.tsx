@@ -12,7 +12,7 @@ export default function Home() {
       {/* Our Story / Intro */}
       <section className="px-6 py-[60px]">
         <div className="max-w-2xl mx-auto">
-          <p className="text-sm font-body font-semibold capitalize text-navy mb-2">
+          <p className="text-sm font-body capitalize text-navy mb-2">
             Our Story
           </p>
           <h2 className="font-serif font-[200] text-[30px] sm:text-4xl text-orange leading-[1.25]">
@@ -30,7 +30,7 @@ export default function Home() {
       <section id="schedule" className="px-6 py-[60px]">
         <div className="max-w-2xl mx-auto">
           <div className="mb-6">
-            <p className="text-sm font-body font-semibold capitalize text-navy mb-2">
+            <p className="text-sm font-body capitalize text-navy mb-2">
               The Day
             </p>
             <h2 className="font-serif font-[200] text-[30px] sm:text-4xl text-orange leading-[1.25]">
@@ -106,7 +106,7 @@ export default function Home() {
       <section id="venue" className="px-6 py-[60px]">
         <div className="max-w-2xl mx-auto">
           <div className="flex flex-col gap-2 mb-6">
-            <p className="text-sm font-body font-semibold capitalize text-navy">
+            <p className="text-sm font-body capitalize text-navy">
               The Venue
             </p>
             <h2 className="font-serif font-[200] text-[30px] sm:text-4xl text-orange leading-[1.25]">
@@ -153,115 +153,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Details: Dress Code & Accommodations */}
+      {/* Details */}
       <section id="details" className="px-6 py-[60px]">
-        <div className="max-w-2xl mx-auto">
-          <div className="mb-14">
-            <p className="text-sm font-body capitalize text-navy-muted mb-2">
-              Details
+        <div className="max-w-2xl mx-auto flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
+            <p className="text-sm font-body font-semibold capitalize text-navy">
+              The details
             </p>
-            <h2 className="font-serif font-medium text-[30px] sm:text-4xl text-stone-800 leading-[1.25]">
-              Need to Know
+            <h2 className="font-serif font-[200] text-[30px] sm:text-4xl text-orange leading-[1.25]">
+              All the wee bits
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6">
-            {/* Dress Code */}
-            <div className="bg-cream rounded-xl border border-stone-300/30 p-6 sm:p-8 text-center">
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-sage-light/40 flex items-center justify-center">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  className="text-sage-dark"
-                >
-                  <path d="M12 2l3 7h-6l3-7zM8 9l-4 13h16L16 9" />
-                </svg>
-              </div>
-              <h3 className="font-serif text-xl text-stone-800 mb-2">
-                Dress Code
+          <div className="flex flex-col gap-4">
+            {/* Dress code */}
+            <div className="bg-[#f8f8f8] rounded-lg p-5 flex flex-col gap-2">
+              <h3 className="font-serif font-medium text-xl text-navy">
+                Dress code
               </h3>
-              <p className="text-stone-500 text-sm leading-relaxed">
-                Smart casual or garden party attire. Wear something you feel
-                wonderful in — just leave the white dresses for the bride!
+              <p className="font-body text-sm text-navy-soft leading-[1.625]">
+                Lorem ipsum dolor sit amet consectetur. Integer nulla fringilla
+                faucibus sit pharetra ac in massa.
               </p>
             </div>
 
             {/* Gifts */}
-            <div className="bg-cream rounded-xl border border-stone-300/30 p-6 sm:p-8 text-center">
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-sage-light/40 flex items-center justify-center">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  className="text-sage-dark"
-                >
-                  <rect x="3" y="8" width="18" height="13" rx="1" />
-                  <path d="M12 8v13M3 12h18M7.5 8C7.5 8 7.5 4 12 4s4.5 4 4.5 4" />
-                </svg>
-              </div>
-              <h3 className="font-serif text-xl text-stone-800 mb-2">Gifts</h3>
-              <p className="text-stone-500 text-sm leading-relaxed">
-                Your presence is the greatest gift of all. However, if you wish
-                to give something, a contribution to our honeymoon fund would be
-                greatly appreciated.
+            <div className="bg-[#f8f8f8] rounded-lg p-5 flex flex-col gap-2">
+              <h3 className="font-serif font-medium text-xl text-navy">Gifts</h3>
+              <p className="font-body text-sm text-navy-soft leading-[1.625]">
+                Your presence is the best gift we could ask for however if you
+                wish to contribute towards our honeymoon, a small contribution
+                would be deeply appreciated.
               </p>
             </div>
 
             {/* Parking */}
-            <div className="bg-cream rounded-xl border border-stone-300/30 p-6 sm:p-8 text-center">
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-sage-light/40 flex items-center justify-center">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  className="text-sage-dark"
-                >
-                  <rect x="3" y="3" width="18" height="18" rx="3" />
-                  <path d="M9 16V8h4a3 3 0 010 6H9" />
-                </svg>
-              </div>
-              <h3 className="font-serif text-xl text-stone-800 mb-2">
+            <div className="bg-[#f8f8f8] rounded-lg p-5 flex flex-col gap-2">
+              <h3 className="font-serif font-medium text-xl text-navy">
                 Parking
               </h3>
-              <p className="text-stone-500 text-sm leading-relaxed">
-                Free parking is available at the venue. Please follow the signs
-                upon arrival.
+              <p className="font-body text-sm text-navy-soft leading-[1.625]">
+                The Bowfield Hotel and Spa has plenty of parking available and is
+                free to use also.
               </p>
             </div>
 
-            {/* Accommodation */}
-            <div className="bg-cream rounded-xl border border-stone-300/30 p-6 sm:p-8 text-center">
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-sage-light/40 flex items-center justify-center">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  className="text-sage-dark"
-                >
-                  <path d="M3 21V7l9-4 9 4v14" />
-                  <path d="M9 21v-6h6v6" />
-                </svg>
+            {/* Menu */}
+            <div className="bg-[#f8f8f8] rounded-lg p-5 flex flex-col gap-2">
+              <h3 className="font-serif font-medium text-xl text-navy">Menu</h3>
+              <div className="font-body text-sm text-navy-soft leading-[1.625]">
+                <p className="font-semibold">Starter</p>
+                <p>Lentil and vegetable soup</p>
+                <p className="font-semibold mt-4">Main</p>
+                <p>
+                  Braised beef with red wine jus, fondant potatoes and
+                  vegetables
+                </p>
+                <p className="font-semibold mt-4">Dessert</p>
+                <p>Profiteroles</p>
+                <p className="italic mt-4">
+                  Please make us aware of any dietary requirements when
+                  RSVP-ing.
+                </p>
               </div>
-              <h3 className="font-serif text-xl text-stone-800 mb-2">
-                Accommodation
-              </h3>
-              <p className="text-stone-500 text-sm leading-relaxed">
-                There are several lovely options nearby. Feel free to reach out
-                if you need help finding somewhere to stay.
-              </p>
             </div>
           </div>
         </div>

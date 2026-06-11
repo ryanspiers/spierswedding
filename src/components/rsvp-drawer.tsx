@@ -31,7 +31,7 @@ export function RsvpDrawer() {
       <Link
         href="https://withjoy.com/ryan-and-leigh-sept-26/rsvp"
         tabIndex={visible ? 0 : -1}
-        className="block w-full text-center bg-navy text-white py-3.5 rounded-md text-sm tracking-wide hover:bg-navy/90 transition-colors"
+        className="block w-full text-center bg-navy text-white font-serif py-3.5 rounded-md text-sm tracking-wide hover:bg-navy/90 transition-colors"
       >
         RSVP
       </Link>
