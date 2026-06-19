@@ -41,31 +41,31 @@ export default function Home() {
           <div className="flex flex-col">
             {[
               {
-                time: "14:00",
+                time: "13:30",
                 title: "Guest Arrival",
                 description:
                   "Please arrive and take your seats. We kindly ask that all phones are put away during the ceremony.",
               },
               {
-                time: "14:30",
+                time: "14:00",
                 title: "The Ceremony",
                 description:
-                  "The moment we have been waiting for — join us as we exchange our vows.",
+                  "The moment we have been waiting for, join us as we exchange our vows.",
               },
               {
-                time: "15:30",
+                time: "14:30",
                 title: "Drinks Reception",
                 description:
                   "Celebrate with us over welcome drinks, canapes, and plenty of photos.",
               },
               {
-                time: "17:30",
-                title: "Wedding Breakfast",
+                time: "16:15",
+                title: "Dinner",
                 description:
-                  "Take your seats for the wedding breakfast, speeches, and toasts.",
+                  "Take your seats for the dinner, speeches, and toasts.",
               },
               {
-                time: "20:00",
+                time: "19:30",
                 title: "Evening Celebration",
                 description:
                   "The dance floor opens! Join us for an evening of music, drinks, and dancing.",
@@ -172,8 +172,7 @@ export default function Home() {
                 Dress code
               </h3>
               <p className="font-body text-sm text-navy-soft leading-[1.625]">
-                Lorem ipsum dolor sit amet consectetur. Integer nulla fringilla
-                faucibus sit pharetra ac in massa.
+                Dress to impress! Just one tiny request, please steer clear of Burnt Orange as we've already claimed it for the big day.
               </p>
             </div>
 
@@ -183,7 +182,9 @@ export default function Home() {
               <p className="font-body text-sm text-navy-soft leading-[1.625]">
                 Your presence is the best gift we could ask for however if you
                 wish to contribute towards our honeymoon, a small contribution
-                would be deeply appreciated.
+                would be deeply appreciated. <br></br>
+
+                Bank details: XXXXX
               </p>
             </div>
 
@@ -222,12 +223,9 @@ export default function Home() {
       </section>
 
       {/* FAQs */}
-      <section id="faqs" className="px-6 py-[60px]">
+      <section id="faqs" className="px-6 py-[120px]">
         <div className="max-w-2xl mx-auto">
-          <div className="mb-14">
-            <p className="text-sm font-body capitalize text-navy-muted mb-2">
-              Questions
-            </p>
+          <div className="mb-8">
             <h2 className="font-serif font-medium text-[30px] sm:text-4xl text-stone-800 leading-[1.25]">
               Frequently Asked Questions
             </h2>
@@ -237,7 +235,7 @@ export default function Home() {
             {[
               {
                 q: "When should I RSVP by?",
-                a: "Please RSVP by [date]. This helps us finalise numbers with our venue and caterers.",
+                a: "Please RSVP by 24th July. This helps us finalise numbers with our venue and caterers.",
               },
               {
                 q: "Can I bring a plus one?",
@@ -245,11 +243,7 @@ export default function Home() {
               },
               {
                 q: "Are children welcome?",
-                a: "Whilst we love your little ones, we have chosen to make our wedding an adults-only celebration. We hope you understand.",
-              },
-              {
-                q: "What happens if the weather is bad?",
-                a: "The venue has beautiful indoor spaces, so the celebration will carry on rain or shine!",
+                a: "Whilst we love your little ones, we have chosen to only have close family members with children present. If your little one's name is on the invitation then they are invited.",
               },
               {
                 q: "Is there parking available?",
@@ -257,7 +251,7 @@ export default function Home() {
               },
               {
                 q: "Who should I contact with questions?",
-                a: "Please reach out to us directly — we are happy to help with anything you need.",
+                a: "Please reach out to us directly — we are happy to help with anything you need.  Leigh – 07885599515 or Ryan - 07804042026",
               },
             ].map((item, index) => (
               <details
@@ -290,36 +284,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* RSVP CTA */}
-      <section className="px-6 py-[60px]">
-        <div className="max-w-2xl mx-auto">
-          <p className="text-sm font-body capitalize text-navy-muted mb-2">
-            We hope to see you there
-          </p>
-          <h2 className="font-serif font-medium text-[30px] sm:text-4xl text-stone-800 leading-[1.25]">
-            Will You Join Us?
-          </h2>
-          <p className="mt-5 text-base text-stone-500 leading-[1.625] mb-8">
-            Please let us know whether you can make it by completing our RSVP
-            form.
-          </p>
-          <Link
-            href="/rsvp"
-            className="inline-flex items-center justify-center h-12 px-10 bg-sage text-white font-serif text-base tracking-wide rounded-md hover:bg-sage-dark transition-colors"
-          >
-            RSVP Now
-          </Link>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="px-6 py-10 text-center">
-        <p className="font-serif text-lg text-stone-800">Ryan &amp; Leigh</p>
-        <p className="text-sm text-stone-400 mt-2">
-          We can&apos;t wait to celebrate with you.
-        </p>
-      </footer>
       </div>
       <RsvpDrawer />
     </>

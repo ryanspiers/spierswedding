@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 const NAV_LINKS = [
   { label: "Our Day", href: "#schedule" },
@@ -17,15 +16,9 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fffbf5]">
       <div className="px-6 flex items-center justify-between h-[72px]">
-        {/* Logo — replace src with your SVG when ready */}
-        <Link href="/" className="relative w-8 h-8">
-          <Image
-            src="/logo.svg"
-            alt="L&R"
-            width={32}
-            height={32}
-            className="object-contain"
-          />
+        {/* Logo */}
+        <Link href="/" className="font-serif text-xl text-navy tracking-tight">
+          Spiers Wedding
         </Link>
 
         {/* Desktop links */}
@@ -41,7 +34,7 @@ export function Navigation() {
           ))}
           <Link
             href="/rsvp"
-            className="text-sm tracking-wide bg-navy text-white px-5 py-2 rounded-md hover:bg-navy/90 transition-colors"
+            className="text-sm tracking-wide bg-navy-deep text-white px-5 py-2 rounded-md hover:bg-navy-deep/90 transition-colors"
           >
             RSVP
           </Link>
@@ -89,7 +82,7 @@ export function Navigation() {
             <Link
               href="/rsvp"
               onClick={() => setMenuOpen(false)}
-              className="text-base text-center bg-navy text-white px-5 py-3 rounded-md hover:bg-navy/90 transition-colors mt-2"
+              className="text-base text-center bg-navy-deep text-white px-5 py-3 rounded-md hover:bg-navy-deep/90 transition-colors mt-2"
             >
               RSVP
             </Link>

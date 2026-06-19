@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Navigation } from "@/components/navigation";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth">
 <body className="min-h-full flex flex-col antialiased">
-        <Navigation />
         {children}
       </body>
     </html>

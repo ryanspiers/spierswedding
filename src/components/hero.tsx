@@ -83,7 +83,7 @@ function Polaroid({
 
 export function Hero() {
   return (
-    <section id="hero" className="flex flex-col pt-[160px] relative z-0 bg-linear-to-b from-[#fef7f3] to-white">
+    <section id="hero" className="flex flex-col pt-[72px] relative z-0 bg-linear-to-b from-[#fef7f3] to-white">
       {/* Headings — slower scroll via parallax */}
       <div id="hero-headings" className="hero-parallax relative z-0 px-6 pt-10 sm:pt-14">
         <h1 className="font-serif font-[200] text-5xl sm:text-7xl md:text-8xl leading-[0.94] tracking-tight">
@@ -97,10 +97,10 @@ export function Hero() {
       </div>
 
       {/* Polaroid arrangement — scrolls at normal speed, drifts up over the text */}
-      <div className="relative z-10 mt-8 sm:mt-12 w-full aspect-[400/520]">
-        <Polaroid rotate={-6.53} parallax="15vh" delay="1400ms" src="/polaroid1.jpg" alt="Leigh and Ryan" className="w-[51%] left-[-9%] top-0" caption="Engagement" captionRotate={-4.91} />
-        <Polaroid rotate={4.97} parallax="0" delay="1600ms" src="/polaroid2.jpg" alt="Leigh and Ryan" className="w-[42%] left-[55%] top-[17%]" caption="with Pablo" captionRotate={-3.85} />
-        <Polaroid rotate={-1.72} parallax="-9vh" delay="1800ms" src="/polaroid3.jpg" alt="Leigh and Ryan" className="w-[42%] left-[12%] top-[59%]" caption="2022" captionRotate={-5.04} />
+      <div className="relative z-10 mt-8 sm:mt-12 w-full aspect-[400/520] md:aspect-[1000/300]">
+        <Polaroid rotate={-6.53} parallax="15vh" delay="1400ms" src="/polaroid1.jpg" alt="Leigh and Ryan" className="w-[51%] left-[-9%] top-0 md:w-[19%] md:left-[13%] md:top-[8%]" caption="Engagement" captionRotate={-4.91} />
+        <Polaroid rotate={4.97} parallax="0" delay="1600ms" src="/polaroid2.jpg" alt="Leigh and Ryan" className="w-[42%] left-[55%] top-[17%] md:w-[19%] md:left-[40.5%] md:top-0" caption="with Pablo" captionRotate={-3.85} />
+        <Polaroid rotate={-1.72} parallax="-9vh" delay="1800ms" src="/polaroid3.jpg" alt="Leigh and Ryan" className="w-[42%] left-[12%] top-[59%] md:w-[19%] md:left-[68%] md:top-[11%]" caption="2022" captionRotate={-5.04} />
       </div>
     </section>
   );
