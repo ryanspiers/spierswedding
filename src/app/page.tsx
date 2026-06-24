@@ -182,10 +182,16 @@ export default function Home() {
               <p className="font-body text-sm text-navy-soft leading-[1.625]">
                 Your presence is the best gift we could ask for however if you
                 wish to contribute towards our honeymoon, a small contribution
-                would be deeply appreciated. <br></br>
-
-                Bank details: XXXXX
+                would be deeply appreciated.
               </p>
+              <a
+                href="https://prezola.com/buy/view/334120"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full mt-2 h-12 border border-navy rounded-md text-base text-navy tracking-[0.4px] hover:bg-navy/5 transition-colors"
+              >
+                View our gift list
+              </a>
             </div>
 
             {/* Parking */}
@@ -259,7 +265,7 @@ export default function Home() {
                 className="group bg-white/60 rounded-xl border border-stone-300/30 overflow-hidden"
               >
                 <summary className="flex items-center justify-between cursor-pointer p-5 sm:p-6 text-left">
-                  <span className="font-serif text-base sm:text-lg text-stone-800 pr-4">
+                  <span className="font-body text-base sm:text-lg text-stone-800 pr-4">
                     {item.q}
                   </span>
                   <svg
