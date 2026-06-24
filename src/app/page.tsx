@@ -16,7 +16,7 @@ export default function Home() {
             Our Story
           </p>
           <h2 className="font-serif font-[200] text-[30px] sm:text-4xl text-orange leading-[1.25]">
-            Two hearts, one beautiful journey
+            The best is yet to come
           </h2>
           <p className="mt-5 text-base text-navy-soft leading-[1.625]">
             After years of love, laughter, and countless memories together, we
